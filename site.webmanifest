@@ -1,6 +1,7 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Ольга Пашкова | Грудничковое плавание СПб",
+  "short_name": "AquaBaby SPb",
+  "description": "Индивидуальные занятия по грудничковому плаванию от 3 месяцев. Методика «Осознанное погружение». Санкт-Петербург, ул. Доблести д.7 к.1.",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +16,9 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#8FDDE7",
+  "background_color": "#f7fbfb",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "ru"
 }

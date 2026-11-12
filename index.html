@@ -23,6 +23,92 @@
   <title>Ольга Пашкова | Грудничковое и раннее плавание от 3 месяцев в СПб</title>
   <meta name="description" content="Инструктор по грудничковому плаванию Ольга Пашкова. Индивидуальные занятия по методике «Осознанное погружение» в тёплом детском бассейне. Санкт-Петербург, ул. Доблести д.7 к.1." />
   <meta name="theme-color" content="#8FDDE7" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://aquababy-spb.ru/#business",
+      "name": "Ольга Пашкова | Грудничковое плавание",
+      "image": "https://aquababy-spb.ru/hero.png",
+      "url": "https://aquababy-spb.ru/",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Доблести д.7 к.1",
+        "addressLocality": "Санкт-Петербург",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 59.8637864,
+        "longitude": 30.1798202
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "priceRange": "2500 ₽",
+      "currenciesAccepted": "RUB",
+      "paymentAccepted": ["cash", "transfer"],
+      "areaServed": "Санкт-Петербург",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Занятия по грудничковому плаванию",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Индивидуальное занятие по грудничковому плаванию",
+          "description": "Занятие длительностью 30 минут по методике «Осознанное погружение». Аренда бассейна включена в стоимость.",
+          "provider": {
+            "@type": "Person",
+            "name": "Ольга Пашкова"
+          },
+          "areaServed": "Санкт-Петербург",
+          "audience": {
+            "@type": "PeopleAudience",
+            "minAge": "3 months"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "2500",
+            "priceCurrency": "RUB",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-01-01"
+          }
+        }
+      },
+      "sameAs": [
+        "https://vk.ru/im/convo/-242676439?entrypoint=community_page&tab=all"
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://aquababy-spb.ru/#instructor",
+      "name": "Ольга Пашкова",
+      "jobTitle": "Инструктор по грудничковому и раннему плаванию",
+      "worksFor": {
+        "@type": "LocalBusiness",
+        "@id": "https://aquababy-spb.ru/#business"
+      },
+      "image": "https://aquababy-spb.ru/coach.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Санкт-Петербург",
+        "streetAddress": "ул. Доблести д.7 к.1",
+        "addressCountry": "RU"
+      },
+      "sameAs": [
+        "https://vk.ru/im/convo/-242676439?entrypoint=community_page&tab=all"
+      ]
+    }
+  </script>
+
   <style>
     :root {
       --bg: #f7fbfb;
@@ -601,6 +687,112 @@
       line-height: 1.45;
     }
 
+    .reviews-carousel {
+      position: relative;
+      padding: 0 56px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .reviews-track {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      margin-bottom: 8px;
+      transition: transform 0.6s ease;
+      will-change: transform;
+    }
+
+    .review-card {
+      flex: 0 0 auto;
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(59, 183, 198, .13);
+      aspect-ratio: 4 / 5;
+      width: calc(33.333% - 10.7px);
+      min-width: 260px;
+    }
+
+    .review-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .review-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .reviews-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(59, 183, 198, .3);
+      background: rgba(255, 255, 255, .9);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: all .2s ease;
+      box-shadow: 0 12px 30px rgba(26, 93, 111, .12);
+    }
+
+    .reviews-arrow:hover {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+
+    .reviews-arrow:active {
+      transform: translateY(-50%) scale(.95);
+    }
+
+    .reviews-arrow-prev {
+      left: 8px;
+    }
+
+    .reviews-arrow-next {
+      right: 8px;
+    }
+
+    .reviews-arrow svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2.5;
+    }
+
+    .reviews-arrow:disabled {
+      opacity: .4;
+      cursor: default;
+    }
+
+    .review-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s ease;
+    }
+
+    .review-card:hover img {
+      transform: scale(1.04);
+    }
+
     .faq-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -724,6 +916,9 @@
       .hero-card { min-height: 460px; }
       .cards { grid-template-columns: 1fr; }
       .program-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-carousel { padding: 0 20px; }
+      .reviews-track .review-card { width: calc(50% - 8px); min-width: auto; }
+      .reviews-arrow { display: none; }
       .section-head { display: block; }
       .section-text { margin-top: 16px; max-width: 720px; }
       .about { gap: 24px; }
@@ -742,6 +937,9 @@
       section { padding: 56px 0; }
       .method, .place, .cta-box, .about-content { padding: 26px; border-radius: 30px; }
       .program-grid, .faq-grid { grid-template-columns: 1fr; }
+      .reviews-carousel { padding: 0 12px; }
+      .reviews-track .review-card { width: 100%; min-width: auto; }
+      .reviews-arrow { display: none; }
       .hero-actions .btn { width: 100%; }
       .mobile-cta { display: block; }
       .mobile-cta .btn { width: 100%; }
@@ -920,6 +1118,38 @@
       </div>
     </section>
 
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Отзывы родителей</div>
+            <h2>Что говорят о занятиях</h2>
+          </div>
+          <p class="section-text">Реальные отзывы мам и пап после первых занятий по грудничковому плаванию.</p>
+        </div>
+        <div class="reviews-carousel">
+          <button class="reviews-arrow reviews-arrow-prev" aria-label="Предыдущий отзыв">
+            <svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="reviews-track" id="reviewsTrack">
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_1.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_2.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_3.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_4.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_5.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_6.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_7.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_8.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_9.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+            <div class="review-card"><div class="review-image-wrap"><img src="reviews/review_10.jpg" alt="Отзыв родителя" loading="lazy" /></div></div>
+          </div>
+          <button class="reviews-arrow reviews-arrow-next" aria-label="Следующий отзыв">
+            <svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="container">
         <div class="section-head">
@@ -1013,6 +1243,115 @@
         });
       });
     });
+
+    // Карусель отзывов со стрелками (бесконечная бесшовная прокрутка через transform)
+    (function () {
+      const track = document.getElementById('reviewsTrack');
+      const btnPrev = document.querySelector('.reviews-arrow-prev');
+      const btnNext = document.querySelector('.reviews-arrow-next');
+      if (!track || !btnPrev || !btnNext) return;
+
+      const originalCards = Array.from(track.querySelectorAll('.review-card'));
+      if (originalCards.length === 0) return;
+
+      // Сколько карточек сдвигать за один клик
+      function getSlideCount() {
+        if (window.innerWidth <= 640) return 1;
+        if (window.innerWidth <= 980) return 2;
+        return 3;
+      }
+
+      // Клонируем набор карточек 2 раза (итого 3 копии подряд)
+      originalCards.forEach(function (card) {
+        track.appendChild(card.cloneNode(true));
+      });
+      originalCards.forEach(function (card) {
+        track.appendChild(card.cloneNode(true));
+      });
+
+      function getCardWidth() {
+        return originalCards[0].offsetWidth + 16;
+      }
+
+      // Реальная длина одного набора через offsetLeft клона
+      function getSingleSetWidth() {
+        const firstClone = track.children[originalCards.length];
+        return firstClone.offsetLeft - originalCards[0].offsetLeft;
+      }
+
+      let singleSetWidth = getSingleSetWidth();
+
+      // currentX всегда внутри второй (средней) копии: [-2*singleSetWidth, -singleSetWidth]
+      let currentX = -singleSetWidth;
+
+      let isAnimating = false;
+      let isProgrammatic = false;
+
+      function applyTransform(x, smooth) {
+        if (smooth === false) {
+          track.style.transition = 'none';
+        } else {
+          track.style.transition = 'transform 0.6s ease';
+        }
+        track.style.transform = 'translateX(' + x + 'px)';
+        currentX = x;
+        if (smooth === false) {
+          track.offsetHeight; // форсируем перерисовку
+          track.style.transition = 'transform 0.6s ease';
+        }
+      }
+
+      // Инициализация без анимации
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(' + currentX + 'px)';
+      track.offsetHeight;
+      track.style.transition = 'transform 0.6s ease';
+
+      // После каждой анимации — невидимый возврат во вторую копию, если ушли за её границы
+      track.addEventListener('transitionend', function () {
+        if (!isAnimating || isProgrammatic) return;
+        isAnimating = false;
+
+        if (currentX > -singleSetWidth) {
+          // Попали в копию 1 — сдвигаем на setWidth влево, во вторую копию
+          isProgrammatic = true;
+          applyTransform(currentX - singleSetWidth, false);
+          isProgrammatic = false;
+        } else if (currentX < -2 * singleSetWidth) {
+          // Попали в копию 3 — сдвигаем на setWidth вправо, во вторую копию
+          isProgrammatic = true;
+          applyTransform(currentX + singleSetWidth, false);
+          isProgrammatic = false;
+        }
+      });
+
+      btnPrev.addEventListener('click', function () {
+        if (isAnimating || isProgrammatic) return;
+        const step = getCardWidth() * getSlideCount();
+        const target = currentX + step; // движение контента вправо
+        isAnimating = true;
+        applyTransform(target);
+      });
+
+      btnNext.addEventListener('click', function () {
+        if (isAnimating || isProgrammatic) return;
+        const step = getCardWidth() * getSlideCount();
+        const target = currentX - step; // движение контента влево
+        isAnimating = true;
+        applyTransform(target);
+      });
+
+      // Пересчёт при изменении размера окна
+      window.addEventListener('resize', function () {
+        const newSetWidth = getSingleSetWidth();
+        const rel = ((-currentX) % singleSetWidth + singleSetWidth) % singleSetWidth;
+        singleSetWidth = newSetWidth;
+        let target = -singleSetWidth - rel;
+        if (target > -singleSetWidth) target = -singleSetWidth;
+        if (target < -2 * singleSetWidth) target = -2 * singleSetWidth;
+        applyTransform(target, false);
+      });
+    })();
 
     // Яндекс Карты
     let map = null;
